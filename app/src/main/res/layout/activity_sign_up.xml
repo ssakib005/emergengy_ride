@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Activites.EmailLogInActivity"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/login_background"
+        android:layout_margin="20dp"
+        android:alpha=".9"
+        android:layout_gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/anton"
+                    android:padding="8dp"
+                    android:text="@string/sign_up"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="40sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="@string/enter_your_mail"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/aladin"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/email"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/anton"
+                    android:maxLines="1"
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/emailTextBox"
+                    android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_your_password"
+                    android:textSize="20sp"
+                    android:padding="15dp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/aladin"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/password"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/anton"
+                    android:inputType="textPassword"
+                    android:id="@+id/passwordTextBox"
+                    android:textColor="@color/colorBlack"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/confirm_password"
+                    android:textSize="20sp"
+                    android:padding="15dp"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/aladin"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:hint="@string/confirm_password"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:fontFamily="@font/anton"
+                    android:inputType="textPassword"
+                    android:id="@+id/confirmPasswordTextBox"
+                    tools:ignore="TextFields"
+                    android:textColor="@color/colorBlack"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3"
+                    android:id="@+id/riderOrDriverSwitcher">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/anton"
+                        android:gravity="end"
+                        android:text="@string/rider"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <Switch
+                            android:id="@+id/switchRiderOrDriver"
+                            android:layout_width="81dp"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:gravity="center"
+                            style="@style/MySwitch"
+                            android:thumbTint="@color/colorDimBlack"
+                            android:trackTint="@color/colorWhite"
+                            tools:ignore="UnusedAttribute" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/anton"
+                        android:gravity="start"
+                        android:text="@string/driver"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_up"
+                    android:background="@drawable/custom_button"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/anton"
+                    android:layout_margin="10dp"
+                    android:id="@+id/btnSignUp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>
+

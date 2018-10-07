@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/a"
+        android:textSize="60sp"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/aclonica"
+        android:textAlignment="center"
+        android:id="@+id/tvLogo"
+        android:padding="60dp"
+        android:background="@color/colorPrimaryDark"/>
+
+    <ScrollView
+        android:layout_below="@id/tvLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/riderOrDriverScrollView">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".Activites.RiderOrDriver"
+            android:focusableInTouchMode="true"
+            android:id="@+id/mainLayout">
+
+            <TextView
+                android:id="@+id/selectRiderOrDriver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/abril_fatface"
+                android:padding="10dp"
+                android:text="@string/rider_or_driver"
+                android:textAlignment="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/selectRiderOrDriver"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:weightSum="3"
+                android:id="@+id/riderOrDriverSwitcher">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/anton"
+                    android:gravity="end"
+                    android:text="@string/rider"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <Switch
+                        android:id="@+id/switchRiderOrDriver"
+                        android:layout_width="81dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center"
+                        style="@style/MySwitch"
+                        android:thumbTint="@color/colorPrimaryDark"
+                        android:trackTint="@color/colorBlack"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/anton"
+                    android:gravity="start"
+                    android:text="@string/driver"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/riderOrDriverSwitcher"
+                android:layout_marginTop="20dp"
+                android:id="@+id/phoneLayout">
+
+                <com.hbb20.CountryCodePicker
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:ccp_defaultNameCode="Bd"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    app:ccp_textSize="13sp"
+                    android:id="@+id/ccpBtn"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/enter_your_phone_number"
+                    android:gravity="center|start"
+                    android:textSize="15sp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="0dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@color/colorWhite"
+                    android:inputType="phone"
+                    android:id="@+id/etUserPhoneNumber"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/phoneLayout"
+                android:id="@+id/manual_sign_in">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/or"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:padding="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/signIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/baumans"
+                        android:gravity="end"
+                        android:paddingEnd="5dp"
+                        android:paddingStart="5dp"
+                        android:text="@string/sign_in"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:fontFamily="@font/aladin"
+                        android:paddingEnd="0dp"
+                        android:paddingStart="2dp"
+                        android:text="@string/manually"
+                        android:textColor="@color/colorBlack" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/manual_sign_in"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/arrow"
+                    android:contentDescription="@string/button"
+                    android:id="@+id/logInBtn"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+
+

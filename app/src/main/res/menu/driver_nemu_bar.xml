@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/driverProfile"
+        android:title="Profile"
+        android:icon="@mipmap/profile_icon"/>
+    <item android:id="@+id/driverHistory"
+        android:title="History"
+        android:icon="@mipmap/history_icon"/>
+    <item android:id="@+id/driverSetting"
+        android:title="Settings"
+        android:icon="@mipmap/setting_icon"/>
+    <item android:id="@+id/driverLogOut"
+        android:title="Log Out"
+        android:icon="@mipmap/exit_icon"/>
+</menu>
